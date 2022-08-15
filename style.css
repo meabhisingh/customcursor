@@ -1,0 +1,56 @@
+* {
+  margin: 0%;
+  padding: 0%;
+  cursor: none;
+}
+
+.cursor {
+  width: 8px;
+  height: 8px;
+  border-radius: 100%;
+  background-color: #fff;
+  position: absolute;
+  pointer-events: none;
+}
+
+.cursor::after {
+  content: "";
+  width: 8px;
+  height: 8px;
+  border-radius: 100%;
+  padding: 14px;
+  top: -15px;
+  left: -15px;
+  border: 1px solid #fff;
+  position: absolute;
+  animation: cursorHover 0.7s infinite linear alternate;
+}
+
+.container {
+  background-color: rgb(32, 32, 32);
+  width: 100%;
+  height: 100vh;
+}
+
+@keyframes cursorHover {
+  from {
+    transform: scale(1);
+    opacity: 0.1;
+  }
+  to {
+    transform: scale(1.3);
+    opacity: 0.5;
+  }
+}
+
+button {
+  padding: 20px 40px;
+  background-color: yellow;
+  color: black;
+  font: 400 1.2rem sans-serif;
+  border: none;
+  border-radius: 5px;
+}
+button:hover {
+  background-color: rgb(240, 108, 46);
+}
